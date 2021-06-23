@@ -73,34 +73,45 @@ class App extends React.Component {
       });
     });
   }
-}
 
-export function App() {
-  return (
-    <div>
-      <h1>
-        <a href='http://localhost:3000'>MusicApfile</a>
-      </h1>
-      <div className='App'>
-        <SearchBar onSearch={this.search} />
-        <div className='App-playlist'>
-          <SearchResults SearchResults={this.state.searchResults} onAdd={this.doThese} />
-          <Playlist playlistTracks={this.state.playlistTracks} onNameChange={this.updatePlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylist} />
+  render() {
+    return (
+      <div>
+        <h1>
+          <a href='http://localhost:3000'>MusicApfile</a>
+        </h1>
+        <div className='App'>
+          <SearchBar onSearch={this.search} />
+          <div className='App-playlist'>
+            <SearchResults SearchResults={this.state.searchResults} onAdd={this.doThese} />
+            <Playlist playlistTracks={this.state.playlistTracks} onNameChange={this.updatePlaylistName} onRemove={this.removeTrack} onSave={this.savePlaylist} />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
+export default App;
 
-// export function App() {
+// function App() {
 //   return (
-//     <div className='App'>
-//       <div className='App-playlist'>
-//         Learn react
-//       </div>
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
 //     </div>
 //   );
 // }
 
-export default App;
